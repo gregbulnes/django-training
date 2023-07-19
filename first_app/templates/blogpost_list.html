@@ -1,0 +1,23 @@
+<h1>Hello, {{ name }}!</h1>
+<p>Today is: {{ date | date:'D d M Y' }}</p>
+{% if blogposts %}
+    <ul class="blogposts">
+        {% for post in blogposts %}
+            <li>
+                <h2><a href="{% url 'blog-detail' post_id=post.pk %}">{{ post.title }}</a></h2>
+                <p>{{ post.content }}</p>
+                <p><small>Posted on: {{ post.created_at|date:'D d M Y' }}</small></p>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No blog posts yet.</p>
+{% endif %}
+
+<h2>Create New Post</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Submit</button>
+</form>
+
