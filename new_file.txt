@@ -1,4 +1,0 @@
-this is some text 2
-
-
-def my_view...
