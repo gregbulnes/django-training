@@ -2,8 +2,6 @@
 some repo for training exercises
 
 
-adding some docs amsldkfj
+adding some docs mlaskj
 
-amlskdjfmlaskj
-
-adding some more docs
+adding some
